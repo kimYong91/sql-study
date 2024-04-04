@@ -1,5 +1,4 @@
 /*
-
 # 연습문제
 HealthcareManagement 데이터베이스 에서 ALTER를 사용해서 테이블 구조를 변경해보세요.
 

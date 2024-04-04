@@ -4,6 +4,7 @@
 
 */
 CREATE SCHEMA LibraryManagement;
+USE LibraryManagement;
 /*
 1. Books 테이블: 도서 정보를 저장합니다.
     - `BookID` (정수형, 기본 키, 자동 증가): 도서의 고유 번호입니다.

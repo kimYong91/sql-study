@@ -76,9 +76,12 @@
 # SQL (Struectured Query Language)
  - 관계형 데이터베이스(RDBMS)에서 데이터를 관리하기 위해 사용하는 표준화된 언어
  - 데이터 정의 언어 (Data Definition Language) : DDL
+  - CREATE, ALTER, DROP, TRUNCATE, RENAME
  - 데이터 조작 언어 (Data Manipulation Language) : DML
+  - INSERT, UPDATE, DELETE
  - 데이터 질의 언어 (Data Query Language) : DQL
  - 데이터 제어 언어 (Data Control Language) : DCL
+  - GRANT, REVOKE
  - 트랜잭션 제어 언어 (Transaction Control Language) : TCL
 
 ## DCL (Data Control Language)
@@ -100,7 +103,7 @@
   ```
 - 권한 부여나 회수는 DB의 보안과 직접적인 관련이 있음으로 신중히 할 것.
 - 일반적으로 사용자에게 최소한(필요한)의 권한만 부여하는  **최소 권한 원칙** 따름.
-- 데이터에 대한무단 접근을 방지하고, 시스템 보안 수준을 높일 수 있음.
+- 데이터에 대한 무단 접근을 방지하고, 시스템 보안 수준을 높일 수 있음.
 
 * 유저 생성 SQL문
 ```sql
@@ -172,7 +175,7 @@ DROP USER '사용자명'@'호스트명';
   - DECIMAL (M, N) : 고정 소수점 숫자, 정확한 소수 계산에 필요 M 총 자릿수, N 소수점 이하 자릿수
   - FOLAT, DOUBLE : 부동 소수점 소수 4byte, 8byte
 
-2. 문자열 데이커 타입
+2. 문자열 데이터 타입
   - CHAR(N) : 고정 길이 문자열, N은 문자열의 길이, 문자열이 N보다 짧으면 공백으로 채워짐.
   - VARCHAR(N) : 가변 길이 문자열, N은 문자열의 최대 길이, 실제 사용된 길이만큼만 저장공간 차지, 기본값 : 255바이트, MySQL 버전에 따라 최대 바이트가 다름
   - TEXT : 긴 텍스트를 저장, 최대 65,535 바이트
@@ -264,7 +267,7 @@ CREATE TABLE 테이블명 (
       ```SQL
       ALTER TABLE 테이블명
       MODIFY COLUMN 컬럼명 새로운데이터타입
-      ```   
+      ```
    4. CHANGE 열이름 변경 (MySQL의 경우)
       ```SQL
       ALTER TABLE 테이블명
@@ -275,3 +278,58 @@ CREATE TABLE 테이블명 (
       ALTER TABLE 테이블명
       RENAME TO 새로운테이블명;
       ```
+
+## CONSTRAINT 제약조건명 (제약조건 이름 명시하기)
+- 제약조건은 생성시 이름을 생략하고 만들 수 있음
+- 생략하고 만들 경우 자동으로 제약조건의 이름이 부여 됨
+- 생성 시 'CONSTRAINT 제약조건명'이 부여되면, 제약조건 이름을 명시할 수 있음
+- 제약조건의 이름을 확인하기 위해서는 DB객체나 DDL을 확인하면 됨.
+
+```sql
+-- 1. information_schema 오브젝트를 통해 확인
+   -- CONTRAINT_NAME 필드 : 제약조건의 이름
+   SELECT * FROM information_schema.table_constraints
+   WHERE table_name = '테이블명';  -- 테이블명
+
+-- 2. DDL을 통해 확인
+-- SHOW CREATE TABLE 스키마명.테이블명;
+-- 워크벤치의 경우 open value in viewer
+   SHOW CREATE TABLE employees;
+```
+
+## DML (데이터 조작어)
+
+### INSERT (데이터 삽입)
+- DB의 테이블에 새로운 데이터 행을 추가하는데 사용하는 SQL
+- 문법
+```sql
+-- 컬럼을 지정하는 방식
+-- INSERT문에 명시된 열의 순서대로 값을 입력.
+INSERT INTO 테이블명 (컬럼명1, 컬럼명2, ...)
+VALUES (값1, 값2, ...)
+
+-- 컬럼을 지정하지 않는 방식
+-- 테이블 정의(DDL)에 명시된 열의 순서대로 값을 입력해야 됨.
+INSERT INTO 테이블명
+VALUES (값1, 값2, ...)
+
+-- 여러 행을 동시에 삽입하기 (콤마로 구분)
+INSERT INTO 테이블명 (컬럼명1, 컬럼명2, ...)
+VALUES (값1, 값2, ...), -- 첫번째 행
+       (값1, 값2, ...), -- 두번째 행
+       ...              -- N번째 행
+```
+- 주의사항
+   - 해당 열의 데이터 타입 또는 제약조건을 준수하지 않으면 삽입할 수 없음.
+   - NOT NULL : 반드시 값을 입력해야 함.
+   - UNIQUE : 중복값을 넣을 수 없음.
+   - AUTO_INCREMENT : 값을 명시하지 않아도 자동 값 할당
+   - 데이터 무결성을 유지
+
+- 대량의 샘플 데이터 삽입
+```SQL
+INSERT INTO 테이블명 (칼럼명1, 칼럼명2, ...)
+  SELECT문
+```
+  - SELECT문으로 조회한 다른 테이블의 데이터를 대량으로 입력
+  - 테이블의 컬럼과 SELECT문으로 조회한 컬럼의 데이터타입이 일치해야 함.
