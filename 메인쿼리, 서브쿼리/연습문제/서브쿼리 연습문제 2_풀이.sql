@@ -99,3 +99,14 @@ select f.title,
        from film_actor fa
        where fa.film_id = f.film_id ) as '배우의 수'
 from film f;
+
+-- 문제7. 단일 고객이 가장 많이 대여한 영화 수를 조회하세요. (FROM절 사용)
+-- 사용 테이블: rental (rental_id, customer_id)
+SELECT 
+    MAX(r_count)
+FROM
+    (SELECT 
+        customer_id, COUNT(rental_id) AS r_count
+    FROM
+        rental
+    GROUP BY customer_id) AS rent_count;

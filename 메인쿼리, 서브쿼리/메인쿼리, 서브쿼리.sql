@@ -1,4 +1,4 @@
--- 서브쿼리
+-- 서브쿼리 (복잡해지면 가독성의 문제가 생길수 있음, 정보의 양이 많아지면 성능 및 비용 문제가 발생할 수 있음)
 USE SCOTT;
 
 -- 특정 직원 'ALLEN'보다 급여를 많이 받는 직원 찾기
@@ -71,3 +71,25 @@ SELECT ENAME, SAL FROM EMP WHERE SAL < ALL(SELECT SAL FROM EMP WHERE DEPTNO = 20
 SELECT DNAME, LOC FROM DEPT D WHERE EXISTS(SELECT 1 FROM EMP E WHERE E.DEPTNO = D.DEPTNO);
 
 
+
+-- SELECT 절에서 서브쿼리 사용
+SELECT E.ENAME, E.SAL, E.DEPTNO, 
+    -- 각 부서의 평균 급여 => 메인쿼리의 컬럼의 하나로 사용
+	(SELECT AVG(SAL) FROM EMP WHERE DEPTNO = E.DEPTNO) AS "부서평균 급여"
+		FROM EMP E;
+-- 단일 행을 반환하여 사용
+-- 데이터베이스에 따라 성능 및 비용 문제가 발생할 수 있음 (많은 양의 행일 경우 그 행 만큼 서브쿼리가 반복실행 되기 때문.)
+-- 데이터 양이 많을 경우 다른 방법을 사용
+-- 쿼리의 결과를 유연하게 동적으로 표현하고 싶을때 사용
+
+
+-- FROM절 : 인라인 뷰(Inline View)
+-- 서브쿼리가 임시 테이블처럼 동작하게 하여 메인 쿼리에 사용
+-- 생성된 임시 테이블은 쿼리 실행시점에만 존재하고 사라짐 => 쿼리문 안에서만 사용
+-- FROM절의 임시 테이블은 약칭을 주어 사용해야 한다.
+
+-- 부서별 급여평균
+SELECT DEPTNO, AVG(SAL) FROM EMP GROUP BY DEPTNO;
+
+SELECT DEPT_AVG.DEPTNO, DEPT_AVG.AVG_SAL 
+	FROM (SELECT DEPTNO, AVG(SAL) AS AVG_SAL FROM EMP GROUP BY DEPTNO) AS DEPT_AVG;
