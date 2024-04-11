@@ -585,3 +585,18 @@ FROM 테이블명1
         - 쿼리의 결과를 유연하게 동적으로 표현하고 싶을때 사용
       3. FROM절 : 인라인 뷰(Inline View)
         - 서브쿼리가 임시 테이블처럼 동작하게 하여 메인 쿼리에 사용
+
+### 내장함수
+  - MySQL에서 사용자 정의 변수 사용하기
+    - 사용자 정의 변수는 '@' 기호로 시작
+    - 변수 설정
+    ```sql
+    SET @변수이름 = 값;     -- 변수 선언
+    SELECT @변수이름        -- 변수 사용
+    ```
+
+  1. 제어흐름 함수 (IF, CASE, IFNULL, NULLIF ...)
+  2. 문자열 함수 (CONCAT, SUBSTRING, LENGTH ...)
+  3. 수학 함수 (ABS, CEIL, ROUND, FLOOR, SQRT, RAND ...)
+  4. 날짜시간 함수 (NOW, CURDATE, CURTIME, DATE, TIME)
+  5. 시스템 정보 함수 (USER, DATABASE ...)
