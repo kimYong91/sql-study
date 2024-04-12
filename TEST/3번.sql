@@ -1,0 +1,39 @@
+CREATE TABLE `Member` (
+	`Member_ID`	VARCHAR(255)	NOT NULL,
+	`Name`	VARCHAR(255)	NULL,
+	`Address`	VARCHAR(255)	NULL,
+	`Phonenumber`	VARCHAR(255)	NULL
+);
+
+CREATE TABLE `Class` (
+	`Class_NO`	VARCHAR(255)	NOT NULL,
+	`Trainer_name`	VARCHAR(255)	NULL,
+	`StartTime`	VARCHAR(255)	NULL,
+	`EndTime`	VARCHAR(255)	NULL,
+	`class_name`	VARCHAR(255)	NOT NULL,
+	`ID_number`	VARCHAR(255)	NOT NULL
+);
+
+CREATE TABLE `Trainer` (
+	`ID_number`	VARCHAR(255)	NOT NULL,
+	`Trainer_name`	VARCHAR(255)	NULL,
+	`specialty`	VARCHAR(255)	NULL
+);
+
+CREATE TABLE `Enrollment` (
+	`Member_ID`	VARCHAR(255)	NOT NULL,
+	`Class_NO`	VARCHAR(255)	NOT NULL
+);
+
+ALTER TABLE `Member` ADD CONSTRAINT `PK_MEMBER` PRIMARY KEY (
+	`Member_ID`
+);
+
+ALTER TABLE `Class` ADD CONSTRAINT `PK_CLASS` PRIMARY KEY (
+	`Class_NO`
+);
+
+ALTER TABLE `Trainer` ADD CONSTRAINT `PK_TRAINER` PRIMARY KEY (
+	`ID_number`
+);
+
