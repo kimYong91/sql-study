@@ -12,6 +12,10 @@ INSERT INTO class (Class_NO, class_name, StartTime, EndTime, ID_number)
 VALUES (1, '오전 요가', '9:00', '10:00', '1');
 INSERT INTO class (Class_NO, class_name, StartTime, EndTime, ID_number)
 VALUES (2, '저녁 웨이트 트레이닝', '20:00', '21:00', '2');
+INSERT INTO class (Class_NO, class_name, StartTime, EndTime, ID_number)
+VALUES (3, '오후 요가', '9:00', '10:00', '1');
+INSERT INTO class (Class_NO, class_name, StartTime, EndTime, ID_number)
+VALUES (4, '아침 웨이트 트레이닝', '20:00', '21:00', '2');
 
 INSERT INTO enrollment (Member_ID, Class_NO)
 VALUES (1, 1);
