@@ -1,6 +1,7 @@
 USE nomarlization;
 
--- 제 1 정규형 (1NF)
+/* 제 1 정규형 (1NF) */
+
 CREATE TABLE Students (
 	StudentId INT PRIMARY KEY,	-- 학번
     Name VARCHAR(50),			-- 이름
@@ -39,20 +40,186 @@ SELECT * FROM Students_1NF;
 
 
 
--- 제 2 정규형(2NF)
+
+/* 제 2 정규형(2NF) */
 -- 제 1 정규형을 기본적으로 만족되어야 한다.
-CREATE TABLE CoursesRegist (
+
+DROP TABLE IF EXISTS CourseRegist;
+CREATE TABLE CourseRegist (
     StudentId INT,
     CoursesId INT,
-    InsturctorName VARCHAR(255),
+    InstructorName VARCHAR(255),
     CoursesName VARCHAR(255),
     PRIMARY KEY (StudentId, CoursesId)	-- 복합 기본키
 );
 
-INSERT INTO CoursesRegist VALUES
+INSERT INTO CourseRegist VALUES
 	(1, 101, '홍길동', '데이터베이스'),
     (1, 102, '이영희', '자료구조'),
     (2, 101, '홍길동', '데이터베이스'),
     (2, 103, '김철수', '알고리즘');
     
-SELECT * FROM CoursesRegist;
+SELECT * FROM CourseRegist;
+
+-- 삭제 이상 : 학생 1번, 102번 강의 수강 정보를 취소하게 되면 이영희 강사의 자료구조라는 강의 정보가 사라짐
+-- 삽입 이상 : 새로운 강의 104, 전우치 교수의 컴퓨터도술 강의가 개설되면 학생번호에 null값 삽입 문제가 발생
+-- 수정 이상 : 홍길동 교수가 데이터베이스 강의 대싱 안드로이드 강의를 맡게되면 데이터 불일치 발생 가능성이 있음
+
+-- 제 2 정규형으로 테이블을 분해
+-- CoursesRegist (StudentId(PK), CoursesId(PK), InsturctorName, CoursesName)
+-- 부분 함수 종속이 존재 CoursesId -> InsturctorName, CoursesName
+-- 부분 함수 종속성 제거
+-- Enrollment (StudentId(PK), CoursesId(PK))
+-- Course (CoursesId(PK), InsturctorName, CoursesName)
+DROP TABLE IF EXISTS Enrollment;
+DROP TABLE IF EXISTS Course;
+
+-- 분리 테이블 수강참여
+CREATE TABLE Enrollment (
+	StudentId INT,
+    CoursesId INT,
+    PRIMARY KEY (StudentId, CoursesId)
+);
+-- 분리 테이블 강좌
+CREATE TABLE Course (
+	CoursesId INT PRIMARY KEY,
+    InstructorName VARCHAR(255),
+    CoursesName VARCHAR(255)
+);
+
+-- 기존 데이터 복사하여 삽입
+INSERT INTO Enrollment (StudentId, CoursesId)
+	SELECT StudentId, CoursesId FROM CourseRegist;
+    
+-- 기존 데이터 제거하여 삽입
+INSERT INTO Course (CoursesId, InstructorName, CoursesName)
+	SELECT DISTINCT CoursesId, InstructorName, CoursesName FROM CourseRegist;
+
+
+-- 테이블 정보 확인
+SELECT * FROM Enrollment;
+SELECT * FROM Course;
+
+-- 삭제이상없음 : 학생 1번, 102번 강의 수강 정보를 취소하더라도, 이영희 강사의 자료구조라는 강의 정보는 별개의 테이블에 유지
+DELETE FROM Enrollment WHERE StudentId = 1 AND CourseId = 102;
+-- 삽입이상없음 : 새로운 강의 104, 전우치교수의 컴퓨터도술 강의가 개설되더라도 null 값 포함되지 않음
+INSERT INTO Course VALUES (104, '전우치', '컴퓨터도술');
+-- 수정이상없음 : 홍길동 교수가 데이터베이스 강의 대신 안드로이드 강의를 맡게되더라도 한 튜플(행)만 수정하여 데이터 불일치 가능성 없음.
+UPDATE Course SET CourseName = '안드로이드' WHERE InstructorName = '홍길동';
+
+-- 부분함수 종속을 제거하여 완전 함수 종속으로 테이블을 분해하면 2정규형 만족
+
+
+
+
+/* 제 3 정규형 */
+
+CREATE TABLE StudentCourse (
+	StudentId INT,
+    CourseId INT,
+    InstructorName VARCHAR(255),
+    PRIMARY KEY (StudentId)
+);
+-- 학생이 특정 강의에 등록하고, 특정 강의는 특정 강사가 가르치는 상태
+-- 부분 종속성 분석 StudentId -> CourseId, CourseId -> InstructorName
+-- 이행적 종속 StudentId -> InstructorName, 학생번호를 알면 강사 이름을 알 수 있는 상태
+INSERT INTO StudentCourse VALUES
+	(1, 101, '김강사'), (2, 102, '이강사'), (3, 103, '박강사'), (4, 104, '장강사');
+    
+SELECT * FROM StudentCourse;
+-- 이상 현상
+-- 삭제 이상 : 2번 학생이 수강을 취소하면 102번 강의(이강사) 정보가 삭제됨.
+-- 삽입 이상 : 104번 장강사 강의를 개설하면, 학생번호 null 값 삽입 문제 발생 
+-- 수정 이상 : 101번 강의를 조강사 맡게 될 경우 데이터 불일치 문제 발생 가능성 생김.
+
+-- 테이블 분해
+CREATE TABLE Instructor (
+	CourseId INT PRIMARY KEY,     -- 이행적 종속 관계의 결정자를 기본키로 테이블 분해
+    InstructorName VARCHAR(255)	  -- 종속자
+);
+INSERT INTO Instructor (CourseId, InstructorName)
+	SELECT DISTINCT CourseId, InstructorName FROM StudentCourse;
+
+ALTER TABLE StudentCourse DROP COLUMN InstructorName;	-- 기존 테이블의 컬럼(이행종속자) 삭제
+
+-- Before : StudentId -> CourseId, CourseId -> InstructorName
+-- StudentCourse (StudentId(PK), CourseId, InstructorName)
+
+-- After
+-- StudentId -> CourseId		// StudentCourse (StudentId(PK), CourseId)
+-- CourseId -> InstructorName	// Instructor    ( CourseId(PK), InstructorName )
+
+SELECT * FROM Instructor;
+SELECT * FROM StudentCourse;
+
+-- 삭제 이상 : 2번 학생이 수강을 취소하여도 102번 강의(이강사) 정보는 남아있음
+DELETE FROM StudentCourse WHERE StudentId = 2;
+-- 삽입 이상 : 104번 장강사 강의를 개설하더라도, null 값 학생 번호 삽입하지 않음
+INSERT INTO Instructor VALUES (104, '장강사');
+-- 수정 이상 : 101번 강의를 조강사 맡게 되어도 데이터 불일치 문제 발생 가능성 없음
+UPDATE Instructor SET InstructorName = '조강사' WHERE CourseId = 101;
+
+-- 3정규형 만족
+
+
+
+
+/* Boyce-Codd 정규형 (BCNF), 보이스 코드 정규형 */
+DROP TABLE IF EXISTS StudentCourse;
+-- 한 학생은 한 개이상의 특강을 신청할 수 있고
+-- 한 강사는 하나의 특강만 담당할 수 있다고 가정
+CREATE TABLE StudentCourse (
+	StudentId INT,
+    CourseName VARCHAR(255),
+    InstructorName VARCHAR(255),
+    PRIMARY KEY (StudentId, CourseName)
+);
+INSERT INTO StudentCourse VALUES
+	(501, '소셜네트워크', '김교수'), 
+	(401, '소셜네트워크', '김교수'), 
+	(402, '인간과 동물', '성교수'), 
+	(502, '창업전략', '박교수'),
+	(501, '창업전략', '홍교수');
+SELECT * FROM StudentCourse;
+-- 1, 2, 3 정규형 모두 만족
+-- StudentCourse (StudentId(PK), CourseName(PK), InstructorName)
+-- InstructorName (교수이름, 기본키가 아님) -> CourseName
+
+-- 함수 종속성 분석
+-- (StudentId, CourseName) -> InstructorName
+-- InstructorName -> CourseName
+-- 모든 결정자가 후보키(기본키가 될 수 있는 속성 집합)
+
+-- 이상 현상
+-- 삭제 이상 : 402번 학생이 수강을 취소하면 '인간과동물' 특강 정보와 교수 정보가 사라짐
+-- 삽입 이상 : 새로운 특강 정보를 개설해서 최교수가 담당하면 학생정보 null값 삽입 문제 발생
+-- 수정 이상 : 김교수의 특강 제목을 '빅데이터분석'으로 바꾸면 데이터 불일치 가능성 발생
+
+-- 테이블 분해
+-- Enroll (StudentId(PK), InstructorName(PK))
+-- Instructor (InstructorName(PK), CourseName)
+
+-- 1. 특강 참여 릴레이션
+DROP TABLE if EXISTS Enroll;
+CREATE TABLE Enroll (
+	StudentId INT,
+    InstructorName VARCHAR(255),
+    PRIMARY KEY (StudentId, InstructorName)
+);
+INSERT INTO Enroll
+SELECT StudentId, InstructorName FROM StudentCourse;
+
+-- 2. 교수 특강 릴레이션
+DROP TABLE if EXISTS Instructor;
+CREATE TABLE Instructor (
+	InstructorName VARCHAR(255),
+    CourseName VARCHAR(255),
+    PRIMARY KEY (InstructorName)
+);
+INSERT INTO Instructor
+SELECT DISTINCT InstructorName, CourseName FROM StudentCourse;
+
+SELECT * FROM Enroll;
+SELECT * FROM Instructor;
+
+SELECT e.StudentId, i.InstructorName, i.CourseName FROM Enroll e JOIN Instructor i ON e.InstructorName = i.InstructorName;
