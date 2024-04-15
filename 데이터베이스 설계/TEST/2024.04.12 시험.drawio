@@ -1,0 +1,162 @@
+<mxfile host="app.diagrams.net" modified="2024-04-12T06:15:12.647Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="w4l0YJpQXzb8z3P3buzT" version="24.2.3" type="device">
+  <diagram name="페이지-1" id="kB3GVhyvK6U9Cgo5InYz">
+    <mxGraphModel dx="636" dy="783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gJBaAHsb1nTfLczXqozD-1" value="&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:35.0pt;text-indent:-35.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-weight:bold;font-size:9.5pt;&quot;&gt;문제 데이터베이스 설계&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-weight:bold;font-size:9.5pt;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-weight:bold;font-size:9.5pt;&quot;&gt;모델링하기&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;font-size:9.5pt;&quot;&gt;  &amp;nbsp;  &lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;소규모 체육관 관리 시스템을 위한 데이터베이스를 설계합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;이 시스템은 다음과 같은 기능을 수행할 수 있어야 합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;font-size:9.5pt;&quot;&gt;  &amp;nbsp;  &lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;요구사항&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;]&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;  &lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;1. &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;회원&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(Member) &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;정보 관리&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;회원은 이름&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(name), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;주소&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(address), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;전화번호&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(phone)&lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;를 포함합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;  &lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;2. &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;트레이너&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(Trainer) &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;정보 관리&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;트레이너는 이름&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(name), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;전문 분야&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(specialty)&lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;를 포함합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;  &lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;3. &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;강습 클래스&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(Class) &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;관리&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;각 클래스는 클래스명&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(class_name), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;시작 시간&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(start_time), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;종료 시간&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(end_time), &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;담당 트레이너를 포함합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;0&quot; style=&quot;line-height:130%;margin-left:18.0pt;text-indent:-18.0pt;mso-pagination:none;text-autospace:none;mso-padding-alt:0pt 0pt 0pt 0pt;&quot;&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;  &lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;4. &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;회원별 클래스 등록&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;(Enrollment) &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;관리&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;: &lt;/span&gt;&lt;span style=&quot;font-family:돋움;mso-fareast-font-family:돋움;font-size:9.5pt;&quot;&gt;각 등록은 어떤 회원이 어떤 강습 클래스에 등록했는지 기록합니다&lt;/span&gt;&lt;span lang=&quot;EN-US&quot; style=&quot;mso-fareast-font-family:돋움;font-family:돋움;mso-ascii-font-family:돋움;mso-font-width:100%;letter-spacing:0pt;mso-text-raise:0pt;font-size:9.5pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;div id=&quot;hwpEditorBoardContent&quot; class=&quot;hwp_editor_board_content&quot; data-hjsonver=&quot;1.0&quot; data-jsonlen=&quot;11067&quot;&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="9" y="30" width="810" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-2" value="회원" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-3" value="트레이너" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-4" value="강습클래스" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-7" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-8" target="gJBaAHsb1nTfLczXqozD-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="419" as="sourcePoint" />
+            <mxPoint x="220" y="419" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-8" value="회원ID" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-9" value="이름" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-10" value="주소" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="270" y="500" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-11" value="전화번호" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="300" y="410" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-12" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-9" target="gJBaAHsb1nTfLczXqozD-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="410" as="sourcePoint" />
+            <mxPoint x="490" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-13" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-10" target="gJBaAHsb1nTfLczXqozD-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="169.64" y="476" as="sourcePoint" />
+            <mxPoint x="204.64" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-14" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-11" target="gJBaAHsb1nTfLczXqozD-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="500" as="sourcePoint" />
+            <mxPoint x="270" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-15" value="트레이너_이름" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="440" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-16" value="전문분야" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="610" y="750" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-17" value="&lt;u&gt;사번&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="590" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-18" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-3" target="gJBaAHsb1nTfLczXqozD-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="730" as="sourcePoint" />
+            <mxPoint x="480" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-19" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-15" target="gJBaAHsb1nTfLczXqozD-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="750" as="sourcePoint" />
+            <mxPoint x="480" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-16" target="gJBaAHsb1nTfLczXqozD-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="760" as="sourcePoint" />
+            <mxPoint x="610" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-21" value="클래스명" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="30" y="680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-22" value="시작시간" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="160" y="770" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-23" value="종료시간" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-25" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-21" target="gJBaAHsb1nTfLczXqozD-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="670" as="sourcePoint" />
+            <mxPoint x="160" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-26" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-4" target="gJBaAHsb1nTfLczXqozD-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="670" as="sourcePoint" />
+            <mxPoint x="340" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-27" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-23" target="gJBaAHsb1nTfLczXqozD-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="760" as="sourcePoint" />
+            <mxPoint x="250" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-28" value="등록" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="150" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-29" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-2" target="gJBaAHsb1nTfLczXqozD-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="539.5" as="sourcePoint" />
+            <mxPoint x="300" y="539.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-40" value="M" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gJBaAHsb1nTfLczXqozD-29">
+          <mxGeometry x="-0.66" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-30" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-28" target="gJBaAHsb1nTfLczXqozD-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="530" as="sourcePoint" />
+            <mxPoint x="290" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-41" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gJBaAHsb1nTfLczXqozD-30">
+          <mxGeometry x="0.6286" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-35" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-4" target="gJBaAHsb1nTfLczXqozD-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="690" as="sourcePoint" />
+            <mxPoint x="310" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-36" value="트레이너_이름" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="270" y="750" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-39" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="gJBaAHsb1nTfLczXqozD-4" target="gJBaAHsb1nTfLczXqozD-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="700" as="sourcePoint" />
+            <mxPoint x="500" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-43" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gJBaAHsb1nTfLczXqozD-39">
+          <mxGeometry x="0.7" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gJBaAHsb1nTfLczXqozD-44" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="gJBaAHsb1nTfLczXqozD-39">
+          <mxGeometry x="-0.8923" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
