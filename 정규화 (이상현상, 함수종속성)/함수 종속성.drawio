@@ -1,0 +1,271 @@
+<mxfile host="app.diagrams.net" modified="2024-04-15T03:22:21.413Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="21JTkOhxgziqnYWgy9fF" version="24.2.3" type="device">
+  <diagram name="페이지-1" id="QhUZsnkzY-JOOwtnjSy3">
+    <mxGraphModel dx="1386" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Okc7fZMENxAONzCNdvcy-43" value="" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="750" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-22" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;함수종속성 다이어그램&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="299" y="70" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-1" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;학생 번호 - &amp;gt;&amp;nbsp; 학생 이름&lt;/font&gt;&lt;div style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;학생 번호 - &amp;gt;&amp;nbsp; 학과&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;학생 번호 - &amp;gt;&amp;nbsp; 주소&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;학과 -&amp;gt; 학과 사무실&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;강좌 이름 -&amp;gt; 강의실&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 19px;&quot;&gt;&lt;font style=&quot;font-size: 19px;&quot;&gt;(학생 번호, 강좌 이름) -&amp;gt; 성적&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="39" y="210" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-26" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="324" y="150" width="460" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-2" target="Okc7fZMENxAONzCNdvcy-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-2" target="Okc7fZMENxAONzCNdvcy-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-2" target="Okc7fZMENxAONzCNdvcy-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-2" target="Okc7fZMENxAONzCNdvcy-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-2" value="학생 번호" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="10" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-3" target="Okc7fZMENxAONzCNdvcy-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-3" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="10" y="170" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-4" value="주소" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="180" y="100" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-6" value="학생 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-12" target="Okc7fZMENxAONzCNdvcy-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-12" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="180" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-14" value="학과 사무실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="360" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-17" value="강의실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry x="180" y="170" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Okc7fZMENxAONzCNdvcy-26" source="Okc7fZMENxAONzCNdvcy-19" target="Okc7fZMENxAONzCNdvcy-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-19" value="" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry y="70" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-20" value="성적" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="Okc7fZMENxAONzCNdvcy-26">
+          <mxGeometry y="270" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-27" value="&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;부분 릴레이션 분해&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="319" y="565" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-45" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;학생 수강 성적(학생 번호, 학생 이름,&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;학과, 주소, 학과 사무실&lt;/span&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;강의실(강좌 이름, 강의실)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="15" y="730" width="320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-33" target="Okc7fZMENxAONzCNdvcy-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-33" target="Okc7fZMENxAONzCNdvcy-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-33" target="Okc7fZMENxAONzCNdvcy-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-33" target="Okc7fZMENxAONzCNdvcy-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-33" value="학생 번호" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="350" y="760" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-35" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="350" y="850" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-36" value="주소" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="780" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-37" value="학생 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-39" target="Okc7fZMENxAONzCNdvcy-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-39" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="520" y="730" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-40" value="학과 사무실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="730" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Okc7fZMENxAONzCNdvcy-43" target="Okc7fZMENxAONzCNdvcy-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-44" value="성적" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-46" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="500" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-46" target="Okc7fZMENxAONzCNdvcy-48" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-48" value="강의실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="940" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-49" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;강의실&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="880" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-50" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;학생 수강 성적(학생 번호, 학생 이름,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;주소,&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;학과, 강좌 이름&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;학과(학과, 학과 사무실)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;강의실(강좌 이름, 강의실)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1230" width="340" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-55" target="Okc7fZMENxAONzCNdvcy-57" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-55" target="Okc7fZMENxAONzCNdvcy-58" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-55" target="Okc7fZMENxAONzCNdvcy-57" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-55" target="Okc7fZMENxAONzCNdvcy-60" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-55" value="학생 번호" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="381" y="1190" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-56" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="381" y="1280" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-57" value="주소" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="551" y="1210" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-58" value="학생 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="451" y="1110" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-60" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="551" y="1160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-68" target="Okc7fZMENxAONzCNdvcy-63" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-63" value="성적" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="381" y="1370" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-64" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1310" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-64" target="Okc7fZMENxAONzCNdvcy-66" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-66" value="강의실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1310" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-67" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;강의실&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1270" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-68" value="" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="371" y="1180" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-69" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-70" value="학과 사무실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1430" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-69" target="Okc7fZMENxAONzCNdvcy-70" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-72" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;학과&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="610" y="1380" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-73" value="&lt;span style=&quot;font-size: 17px;&quot;&gt;학생 (학생 번호, 학생 이름,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;주소,&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp;학과&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-size: 17px;&quot;&gt;)&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;학생 성적 (학생 이름, 강좌 이름, 성적)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;학과 (학과, 학과 사무실)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 17px; background-color: initial;&quot;&gt;강의실 (강좌 이름, 강의실)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="24" y="1680" width="310" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-78" target="Okc7fZMENxAONzCNdvcy-80" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-78" target="Okc7fZMENxAONzCNdvcy-81" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-78" target="Okc7fZMENxAONzCNdvcy-80" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-78" target="Okc7fZMENxAONzCNdvcy-82" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-78" value="학생 번호" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="533" y="1710" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-79" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="384" y="1790" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-80" value="주소" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="703" y="1730" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-81" value="학생 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="533" y="1640" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-82" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="703" y="1680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-83" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-89" target="Okc7fZMENxAONzCNdvcy-84" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-84" value="성적" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="384" y="1900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-85" value="강좌 이름" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="533" y="1840" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-85" target="Okc7fZMENxAONzCNdvcy-87" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-87" value="강의실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="703" y="1840" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-88" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;강의실&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="603" y="1790" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-89" value="" style="whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="374" y="1700" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-90" value="학과" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="534" y="1950" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-91" value="학과 사무실" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="704" y="1950" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-92" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="Okc7fZMENxAONzCNdvcy-90" target="Okc7fZMENxAONzCNdvcy-91" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-93" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;학과&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="614" y="1900" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-94" value="학생 번호" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="384" y="1720" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-95" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;학생 성적&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="364" y="1650" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-97" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;학생&lt;/font&gt;&lt;/b&gt;(테이블)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="613" y="1590" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-98" value="&lt;b&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="394" y="620" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-100" value="&lt;b&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="394" y="1050" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Okc7fZMENxAONzCNdvcy-101" value="&lt;b&gt;&lt;font style=&quot;font-size: 30px;&quot;&gt;3&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="394" y="1530" width="40" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
