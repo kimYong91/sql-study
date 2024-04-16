@@ -6,7 +6,7 @@ CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100),
     quantity INT DEFAULT 0,
-    price DECIMAL(10, 2)
+    price DECIMAL(10, 2) -- 10은 자릿수, 2는 .이하의 자릿수
 );
 
 INSERT INTO products (product_name, quantity, price) VALUES
