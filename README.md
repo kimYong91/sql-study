@@ -1099,7 +1099,7 @@ DELIMITER ;
 ```SQL
 DELIMITER $$
 CREATE FUNCTION 함수명(매개변수명1 타입, 매개변수명2 타입, .....)
-  RETURN 리터함수
+  RETURN 리턴함수
 BEGIN
   -- 함수 본문.....
   RETURN 반환값;
